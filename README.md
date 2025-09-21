@@ -5,8 +5,8 @@ from ultralytics import YOLO
 import os
 execution_path = os.getcwd()
 model = YOLO("yolov8n.pt") 
-input_image_path = os.path.join(execution_path, "image.jpg")
-output_image_path = os.path.join(execution_path, "Imagenew.jpg")
+input_image_path = os.path.join(execution_path, "input-image.jpg")
+output_image_path = os.path.join(execution_path, "output.jpg")
 results = model(input_image_path)
 results[0].save(save_dir=execution_path)
 for result in results:
